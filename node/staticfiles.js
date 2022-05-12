@@ -1,9 +1,9 @@
-const http = require('http');
-const port = process.env.PORT || 3000;
+const http = require('http')
+const port = process.env.PORT || 3000
 const server = http.createServer((req,res) => {
  //normaliza a url  removendo a querystring e a barra final
  //opcional e usando letras minusculas
- const path = req.url.replace(/\/?(?:\?.*)?$/, '').toLowwerCase()
+ const path = req.url.replace(/\/?(?:\?.*)?$/, '').toLowerCase()
  switch(path) {
      case '':
          res.writeHead(200,{'Content-Type':'text/plain'})
